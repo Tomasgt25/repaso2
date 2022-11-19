@@ -5,11 +5,11 @@ public class Main {
         int opcion;
         System.out.println("Escriba un número; 1 Crear un profesor, 2 Crear un Alumno, 3 Mostrar profesores y alumnos,4 Salir");
         Scanner teclado = new Scanner(System.in);
-        opcion= teclado.nextInt();
+
         Alumno alumno = new Alumno();
         Profesor profesor = new Profesor();
         do {
-
+            opcion= teclado.nextInt();
             switch(opcion){
 
                 case 1:
@@ -42,6 +42,7 @@ public class Main {
 
                 case 3:
                     System.out.println(alumno.toString()+ profesor.toString());
+                    break;
 
                 case 4:
                     System.out.println("Ha salido del programa");

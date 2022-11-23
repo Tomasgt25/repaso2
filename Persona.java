@@ -1,16 +1,16 @@
 //Clase Persona
 public abstract class Persona {
-
+    
     //Atributos: Nombre, Dni y edad
-
+    
     protected String nombre;
     protected String dni;
      protected int edad;
-
+    
     //Constructor que recibe todos los parámetros
-
+    
     Persona(){}
-
+    
     Persona(String dni, int edad, String nombre) {
         this.dni=dni;
         this.edad=edad;
@@ -43,11 +43,5 @@ public abstract class Persona {
 
     //metodo toString que no se implementara en esta clase.
     @Override
-    public String toString() {
-        return "Persona{" +
-                "nombre='" + nombre + '\'' +
-                ", dni=" + dni +
-                ", edad=" + edad +
-                '}';
-    }
+    public abstract String toString();
 }

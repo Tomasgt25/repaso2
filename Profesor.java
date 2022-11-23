@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 //Se crea una clase Profesor que tiene todos los atributos de Persona
 public class Profesor extends Persona {
     private float salario;
@@ -32,7 +34,10 @@ public class Profesor extends Persona {
     public String toString() {
         return "Profesor{" +
                 "salario=" + salario +
-                ", asignaturas='" + asignaturas + '\'' +
-                "} " + super.toString();
+                ", asignaturas=" + Arrays.toString(asignaturas) +
+                ", nombre='" + nombre + '\'' +
+                ", dni='" + dni + '\'' +
+                ", edad=" + edad +
+                '}';
     }
 }

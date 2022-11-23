@@ -19,6 +19,9 @@ public class Alumno extends Persona {
     public String toString() {
         return "Alumno{" +
                 "curso='" + curso + '\'' +
-                "} " + super.toString();
+                ", nombre='" + nombre + '\'' +
+                ", dni='" + dni + '\'' +
+                ", edad=" + edad +
+                '}';
     }
 }

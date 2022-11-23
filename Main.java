@@ -3,14 +3,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int opcion;
-        System.out.println("Escriba un número; 1 Crear un profesor, 2 Crear un Alumno, 3 Mostrar profesores y alumnos,4 Salir");
         Scanner teclado = new Scanner(System.in);
-
         Alumno alumno = new Alumno();
         Profesor profesor = new Profesor();
         do {
-            opcion= teclado.nextInt();
-            switch(opcion){
+            System.out.println("Escriba un número; 1 Crear un profesor, 2 Crear un Alumno, 3 Mostrar profesores y alumnos,4 Salir");
+            opcion = teclado.nextInt();
+            switch (opcion) {
 
                 case 1:
 
@@ -36,22 +35,24 @@ public class Main {
                     alumno.setDni(teclado.nextLine());
                     System.out.println("Introduzca EDAD");
                     alumno.setEdad(teclado.nextInt());
+                    teclado.nextLine();
                     System.out.println("Introduzca CURSO");
                     alumno.setCurso(teclado.nextLine());
                     break;
 
+
                 case 3:
-                    System.out.println(alumno.toString()+ profesor.toString());
+                    System.out.println(alumno + "|" + profesor);
                     break;
-
-                case 4:
-                    System.out.println("Ha salido del programa");
-                }
-
 
 
             }
 
-             while (opcion!=4);
+
+        }
+
+
+        while (opcion != 4);
+        System.out.println("Ha salido del programa");
     }
 }
